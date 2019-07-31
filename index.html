@@ -1,3 +1,5 @@
+
+
 <html>
 
 <head>
@@ -38,19 +40,17 @@
         </div>
 
  
-    <div id="About" class="format " >
-       
-        <h2  >
+    <div id="About" class="format  "  >
+         <h2>
             About
         </h2>
-       
-        <p  class="r" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam ab quia adipisci vel inventore quam minus consectetur unde, tenetur voluptatum nobis totam iusto veniam laborum aperiam quidem commodi pariatur!<br>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam ab quia adipisci vel inventore quam minus consectetur unde, tenetur voluptatum nobis totam iusto veniam laborum aperiam quidem commodi pariatur!<br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit blanditiis eligendi dolorem, beatae quisquam eius ut eum dolorum perferendis ducimus! Et sit qui sequi eveniet dolor. At accusamus quo error.
         </p>
-       
         <picture ><img src="pic.1.jpg" alt="Boss" width="400" height="475"></picture>
-
+    
     </div>
+</div>
 
     <div id="Skills" class="format">
         <h2>
@@ -123,20 +123,34 @@
 </body>
 
 <footer>
-    <div class="format" id="Contact"  >
+    <form class="format" id="Contact"  >
     <h2 >
         <u>Contact Info</u>
     </h2>
     
-<!--<label for="name">Name</label>
-<input type="name" name="name">
+    
+<label for="name">Name</label>
+<input type="name" name="name" id="name" required>
 <br>
 <label for="email">Email</label>
-<input type="email"name="email">
+<input type="email"name="email" id="email" required>
 <br><br>
-<textarea cols="60" rows="10">Query</textarea>-->
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZjXpg8_r-T0rekKXcXKgBhCsLGMCRBPKanM2-HVwU3K76rA/viewform?embedded=true" width="640" height="822" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
+<textarea cols="60" rows="10" id="query" > Query</textarea> 
+
+<div class="notify"> Sucssesful</div>
+
+
+<form action="?" method="POST">
+        <div style="display: block;" class="g-recaptcha" data-sitekey="6LdLq7AUAAAAAM_YTpRg-11Pu_r4huBuprBSAy7q"></div>
+        <br/>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+</form>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+ <script src="main.js"></script>
 </footer>
 </html>
 

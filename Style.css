@@ -1,16 +1,27 @@
 
+
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #1f2833
+    background-color: #1f2833;
+    background-image: url("background.jpg");
+    background-repeat: repeat;
+
 }
 .format{
-    margin: 0 9%;
-    display: inline-block;
+    margin: 11%;
+
+    display:block;
     font-size: 1.3em;
     height: 100%;
-}
+    background: rgb(31, 40, 51, 0.7);
+    padding: 15px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    
+ }
+
 /*Home*/
 #myVid{
 position:absolute;
@@ -22,13 +33,13 @@ z-index:-1;
 .header{    
 position: relative;
     width: 100%;
-  height: 100vh;
+  height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     z-index: -1;
- 
+    background-color: #1f2833;
 }
 .color-overlay{
 position: absolute;
@@ -59,14 +70,13 @@ h2{
     text-align: center; 
     font-size: 250% ;
     border-radius: 5em;
-    min-width: 100%;
+    border-block-start-width: 100%;
+    
 }
-footer div h2{
-    font-family: 'Courier New', Courier, monospace;
-    color:#b82601;
+#contact div h2{
     background-color:#13191f;
     text-align: center; 
-    font-size: 250% ;  
+     
 }
 /*Paragrphs*/
 p{ 
@@ -84,17 +94,18 @@ p{
     z-index: 100;
     position: fixed;
     float:left;
+    
 }
 li a{
     display: block;
     color: #c5c6c7;
     text-align: center;
-    padding: 14px 60px;
+    padding: 14px 40px;
     text-decoration: none;
 }
 li a:hover:not(:active){
     background-color: #1f2833;
-    border-radius: 5em;
+    
 }
 .active{
     background-color:#b82601;
@@ -102,12 +113,15 @@ li a:hover:not(:active){
     border-radius: 0em;
 }
 /*Media Quearys*/
- @media only screen and (max-width: 1250px) {
+ @media only screen and (max-width: 1330px) {
     #About picture img{
+        float:none;
         align-items: center;
+        
+        
 
     }
-    .r{
+    #About p{
         min-width: 100%;
     }
     }
@@ -117,40 +131,53 @@ li a:hover:not(:active){
         }
         .format{
             margin: 0 9%;
-            display: inline-block;
+            display: block;
             height: 160%;
         }
-       nav{
+       nav ul{
            opacity: 0.7;
-           width: 30%;
-       }
+           display: inline-flex;
+          font-size:100%;
+    }
+    nav ul a{
+        padding: 10px 20px;
+    }
+    footer{
+        size: 40%;
+    }
+
     }
 /*About*/
 #About picture img{
     display:flex;
     float: right;
-    
     border-radius: 30px;
+    position: relative;
 }
-picture{
-    float: right;
-    }
-/*Skills*/
-.r{
+#About p{
    max-width: 60%;
 }
-BulletPoint{
-    max-width: 100%;  
+
+/*Skills*/
+ .bullet{
+    color: #a7a9aa;
+    float: left;
+    width: 100%;
 }
-progress{
+/*progress{
     border-radius: 6px;
 }
-/*.PL{
+.PL{
  width: 25%;
     color: #c5c6c7;
-}*/
+}
+*/
+/*projects*/
+ #Projects {
+}
+/*contact*/
 #Contact{
-    height: 90%;
+    height: 130%;
     min-width:100%;
     background-color: #13191f;
     color: #a7a9aa;
@@ -158,13 +185,17 @@ progress{
     margin: 0%;
    border-radius: 20px 20px 0px 0px;
    text-align: center;
-    
+    }
+.notify{
+    padding: 10px;
+    color: #ca3f1d;
+    background: #1f2833;
+    display: none;
+    background-size: 5em;
+    text-align: center;
 }
-.bullet{
-    color: #a7a9aa;
-    float: left;
-    width: 100%;
-}
+  
+
 
 
 
