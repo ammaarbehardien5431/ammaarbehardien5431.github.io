@@ -32,11 +32,20 @@
     <div id="Home" class="header">
         <h1>If Not Why Not</h1>
         <div class="color-overlay">
-         <video autoplay muted loop id="myVid">
+         <video autoplay muted loop id="myVid" class="vid">
             <source src="VID-20190722-WA0025.mp4" type="video/mp4">   
            Not Supported
            </video>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                $('.vid').css("opacity",1- 
+                $(window).scrollTop()/900)
+                })
+                })
+        </script>
         </div>
 
  
@@ -44,13 +53,14 @@
          <h2>
             About
         </h2>
-        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam ab quia adipisci vel inventore quam minus consectetur unde, tenetur voluptatum nobis totam iusto veniam laborum aperiam quidem commodi pariatur!<br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit blanditiis eligendi dolorem, beatae quisquam eius ut eum dolorum perferendis ducimus! Et sit qui sequi eveniet dolor. At accusamus quo error.
-        </p>
-        <picture ><img src="pic.1.jpg" alt="Boss" width="400" height="475"></picture>
+        <p>Hi Ammaar here, Im a 19 year old  aspirering softwear developer. Last year I matriculated with a batulers pass from the Cape Academy of Math 
+            Sience and Technology where i took part in an after school Orical java program where I was tought java fundimentals and java programing. The program was followed up by 
+            a learnership with 6 months of trainging where I was introduced to python basics which I plan to pursue.  
+             I wanted to expand my knoledge of programing languges so I took to Free Code Academy where i was tought HTML5 and CSS with the help of YouTube.
+            I am currently posted at younglings Africa where i wish to specilise in machien learning.  </p>
+        <picture ><img src="pic.1.jpg" alt="Boss" width="200" height="275"></picture>
     
     </div>
-</div>
 
     <div id="Skills" class="format">
         <h2>
@@ -141,8 +151,7 @@
 
 
 <form action="?" method="POST">
-        <div style="display: block;" class="g-recaptcha" data-sitekey="6LdLq7AUAAAAAM_YTpRg-11Pu_r4huBuprBSAy7q"></div>
-        <br/>
+        <div  class="g-recaptcha" data-sitekey="6LdLq7AUAAAAAM_YTpRg-11Pu_r4huBuprBSAy7q"></div>
         <input type="submit" name="submit" value="Submit">
       </form>
 </form>

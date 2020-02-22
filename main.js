@@ -9,12 +9,7 @@ var firebaseConfig = {
 };
 
   firebase.initializeApp(firebaseConfig);
-  const functions = require('firebase-function')
-  const nodemailer = require("nodemailer")
-    
-
   var messageref = firebase.database().ref("message");
-
    document.getElementById('Contact').addEventListener('submit',submit);
 
 function submit(e){
@@ -44,8 +39,9 @@ messageref_2.set({
 });
 }
 
-var GmailAddres='abehardienportfolio@gmail.com';
-var GmailPassword='Password5431';
+
+
+  
 
 exports.SendEmail2 = functions.database.ref("/message/{sessionid}").onCreate(snapshot)
     {
@@ -58,17 +54,31 @@ exports.SendEmail2 = functions.database.ref("/message/{sessionid}").onCreate(sna
 
 }
 
+
+
+
+import { cofig } from 'firebase-function';
+  import { createTransport } from "nodemailer";
+
+  const functions = require('firebase-function');
+  const nodemailer = require("nodemailer");
+
+  var GmailAddres= cofig().gmail.email;
+var GmailPassword= cofig().gmail.password;
+
+const transporter = createTransport({
+    service: 'gmail',
+    port: 465,
+    secure: true,
+    auth:{
+        user:GmailAddres,
+        pass:GmailPassword
+    }
+    
+})
+
 function SendEmail(email , message){
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        port: 465,
-        secure: true,
-        auth:{
-            user:GmailAddres,
-            pass:GmailPassword
-        }
-        
-    })
+  
 
     var mailOptions={
         from:GmailAddres,
@@ -85,6 +95,4 @@ function SendEmail(email , message){
         console.log('Email sent');
     })
 }
-
-
 
