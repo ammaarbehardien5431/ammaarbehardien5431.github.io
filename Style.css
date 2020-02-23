@@ -5,22 +5,15 @@
 
 html{
     scroll-behavior: smooth;
-}
-body{
-    background-color: #363636;
-    background-repeat: repeat;
-
+    background: rgba(59, 59, 59, 1);
 }
 .format{
     margin: 15%;
-
-    display:block;
     font-size: 1.3em;
     height: 100%;
-    background: rgba(51, 51, 51, 0.7);
+    background: rgba(51, 51, 51, 0.94);
     padding: 15px;
-    margin-top: 2.5%;
-
+    margin-top: 2.5%; 
  }
 
 /*Home*/
@@ -41,7 +34,6 @@ position: relative;
     justify-content: center;
     overflow: hidden;
     z-index: -1;
-    background-color: #363636;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -75,7 +67,6 @@ h2{
     
 }
 #contact div h2{
-    background-color:#6F6F6F;
     text-align: center; 
      
 }
@@ -91,7 +82,6 @@ p{
     margin: 0%;
     padding: 0%;
     overflow: hidden;
-    background-color: #6F6F6F;
     font-family: 'Courier New', Courier, monospace;
     z-index: 100;
     position: fixed;
@@ -115,7 +105,7 @@ li a:hover:not(:active){
     border-radius: 0em;
 }
 /*Media Quearys*/
- @media only screen and (max-width: 1330px) {
+ @media only screen and (max-width: 130px) {
     #About picture img{
         float:none;
         align-items: center;
@@ -144,20 +134,23 @@ li a:hover:not(:active){
     nav ul a{
         padding: 10px 20px;
     }
-    footer{
-        size: 40%;
-    }
+ 
 
     }
 /*About*/
 #About picture img{
-    display:flex;
-    float: right;
+    display: flex;
     border-radius: 30px;
-    position: relative;
+    float: right;
+    width: 25%;
+   
+ 
 }
 #About p{
-   max-width: 60%;
+    display: flex;
+    flex-wrap: nowrap;
+   float: left;
+   width: 75%;
 }
 
 /*Skills*/
@@ -191,7 +184,7 @@ li a:hover:not(:active){
 .notify{
     padding: 10px;
     color: #ca3f1d;
-    background: #6F6F6F;
+  
     display: none;
     background-size: 5em;
     text-align: center;
