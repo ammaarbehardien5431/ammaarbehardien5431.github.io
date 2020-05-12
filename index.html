@@ -5,10 +5,11 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-    <nav>
+    <nav id="navbar">
     <ul>
         <li>
             <a class="active" href="#Home">Home</a>
@@ -49,11 +50,11 @@
         </div>
 
  
-    <div id="About" class="format  "  >
+    <div id="About" class="format "  >
          <h2>
             About
         </h2>
-        <picture ><img src="pic.1.jpg" alt="me" width="200" height="275"></picture>
+        <picture ><img src="pic.1.jpg" alt="me" width="200" height="320"></picture>
         <p>Hi Ammaar here, Im a young aspirering softwear developer. I matriculated with a batulers pass from the Cape Academy of Math 
             Sience and Technology in 2019. I took part in an Orical java program which was followed up by a learnership with 6 months of
             Systems Development trainging and an internship at Younglings where I am currently posted. I plan to further my knoledge and 
@@ -66,46 +67,30 @@
         <h2>
         Skills
        </h2>
-       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi iure dicta nostrum ut corrupti soluta, voluptatem error repellat ipsam corporis praesentium ipsum accusamus aperiam, est mollitia obcaecati aliquid, expedita officia.
-           <b>
-            <b>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, doloribus architecto laboriosam, quisquam rem maxime hic cum sed, praesentium officia tempora! Nostrum quia iste inventore esse? Magni blanditiis voluptatem atque.
+       <p>Softwear development is tough. Juggling projects is stressfull. Meeting deadlines is a pain in the ass. 
+           <br>
+           Here are some of the things I can help you out with to make your job easier. 
                  </p>
                  
                  
             
-              <div class="bullet">
-                
-              
-            <div style="float: left; width: 30%;">
-                <h3 >Programing Langueges</h3>
-                <ul>
-                    <li>SQL</li>
-                    <br>
-                  <li>HTML</li>
-                   <br>
-                   <li>Java</li>
-                   <br>
-                   <li>CSS</li>
-                   <br>
-                   <li>Python</li>
-                   <br>
-                   <li>Delphi</li>
-               </ul>
-            </div>
-            <div style="float: left; width: 30%;">
-               <h3 >Langueges</h3>
-               <ul>
+              <div >
+                    <img src="css.png" alt="me" width="150" height="150" class = 'langueges'>
                     
-                   <li>English</li>
-                   <br>
-                   <li>French</li>
-                   <br>
-                   <li>Afrikaans (net 'n bietjie)</li>
+                    <img src="HTMlL.png" alt="me" width="150" height="150" class = 'langueges'>
+                    
+                    <img src="python.png" alt="me" width="150" height="150" class = 'langueges'>
+                    
+                    <img src="java.png" alt="me" width="150" height="150" class = 'langueges'>
+                    
+                    <img src="sql.svg" alt="me" width="150" height="150" class = 'langueges'>
+                    
+        
+ 
         
         </div>
     </div>
-    </div>
+  
               
               
     
@@ -132,7 +117,7 @@
                              
 
            
-</body>
+
 
 <footer>
     <form class="format" id="Contact"  >
@@ -147,7 +132,7 @@
 <label for="email">Email</label>
 <input type="email"name="email" id="email" required>
 <br><br>
-<textarea cols="60" rows="10" id="query" > Query</textarea> 
+<textarea cols="60" rows="10" id="query" > </textarea> 
 
 <div class="notify"> Sucssesful</div>
 
@@ -157,12 +142,27 @@
         <input type="submit" name="submit" value="Submit">
       </form>
 </form>
+
+</footer>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
  <script src="main.js"></script>
-</footer>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("active").style.top = "0";
+  } else {
+    document.getElementById("active").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
 </html>
 
 

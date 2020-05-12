@@ -9,11 +9,12 @@ html{
 }
 .format{
     margin: 15%;
-    font-size: 1.3em;
-    height: 100%;
+    font-size: 1.7em;
     background: rgba(51, 51, 51, 0.94);
-    padding: 15px;
-    margin-top: 2.5%; 
+  
+    
+    min-height: 100%;
+    max-height: inherit;
  }
 
 /*Home*/
@@ -50,7 +51,7 @@ opacity: 0.5;
 .header h1{
 text-align: center;
 font-size: 7em;
-font-family: monospace;
+font-family:  'Bebas Neue', cursive;
 border: 15px  solid #363636;
 color:#ca3f1d;
 text-shadow: 2px 3px 2px #363636;
@@ -59,33 +60,36 @@ margin: 15px;
 z-index: 1;
 }
 h2{
-    font-family: 'Candara';
+    font-family:  'Bebas Neue', cursive;
     color:#FFF;
     text-align: center; 
     font-size: 250% ;
+  padding-top: 0.7em;
     border-block-start-width: 100%;
     
 }
 #contact div h2{
-    text-align: center; 
-     
+    text-align: center;    
 }
 /*Paragrphs*/
 p{ 
     color: #c5c6c7;
-    font-family: 'Arial';
+    font-family: 'Barlow Condensed', sans-serif;
     float: left;
+    padding: 25px;
 }
 /*Nav Bar*/
  nav ul{
     list-style-type: none;
     margin: 0%;
+    top: 0;
     padding: 0%;
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Barlow Condensed', sans-serif;
     z-index: 100;
     position: fixed;
     float:left;
+    transition: top 0.3s;
     
 }
 li a{
@@ -107,14 +111,15 @@ li a:hover:not(:active){
 /*Media Quearys*/
  @media only screen and (max-width: 130px) {
     #About picture img{
-        float:none;
+        float:inherit;
         align-items: center;
-        
+        padding: 250px;
         
 
     }
     #About p{
         min-width: 100%;
+  
     }
     }
 @media only screen and (max-width: 850px) {
@@ -140,24 +145,29 @@ li a:hover:not(:active){
 /*About*/
 #About picture img{
     display: flex;
+   
     border-radius: 30px;
     float: right;
-    width: 25%;
+    padding: 25px;
    
  
 }
 #About p{
-    display: flex;
-    flex-wrap: nowrap;
    float: left;
-   width: 75%;
+   width: 60%;
 }
 
 /*Skills*/
- .bullet{
-    color: #a7a9aa;
-    float: left;
-    width: 100%;
+#Skills p{
+    text-align: center;
+}
+.langueges{
+    display: inline;
+    align-items: center;
+    width= 5em ;
+    height= 5em;
+    padding: 2px 25px 0px 25px;
+  
 }
 /*progress{
     border-radius: 6px;
@@ -176,15 +186,22 @@ li a:hover:not(:active){
     min-width:100%;
     background-color: #272727;
     color: #a7a9aa;
-    font-size: 150%;
+    font-size: 1.8em;
     margin: 0%;
- 
+    font-family: 'Barlow Condensed', sans-serif;
    text-align: center;
     }
+
+input{
+    width: 20%;
+    height: 1.8em;
+}
+input[type= submit]{
+    height: 3em;
+}
 .notify{
     padding: 10px;
     color: #ca3f1d;
-  
     display: none;
     background-size: 5em;
     text-align: center;

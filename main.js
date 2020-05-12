@@ -3,27 +3,30 @@ var firebaseConfig = {
     authDomain: "contactform-46e74.firebaseapp.com",
     databaseURL: "https://contactform-46e74.firebaseio.com",
     projectId: "contactform-46e74",
-    storageBucket: "",
+    storageBucket: "contactform-46e74.appspot.com",
     messagingSenderId: "703474479916",
     appId: "1:703474479916:web:d34a9cfc3b2b6ebb"
 };
-
   firebase.initializeApp(firebaseConfig);
-  var messageref = firebase.database().ref("message");
-   document.getElementById('Contact').addEventListener('submit',submit);
+
+var messageref = firebase.database().ref("message");
+document.getElementById('Contact').addEventListener('submit',submit);
 
 function submit(e){
-    e.preventDefault;
+    e.preventDefault();
   
-    var name=  getInput('name');
+    var name=  getInput('name'); 
     var email= getInput('email');
     var Quey= getInput('query');
+    
     saveMessege(name, email,Quey);
     document.querySelector(".notify").style.display='block';
-    document.querySelector("html").style.scrollBehavior='auto';
+    //document.querySelector("html").style.scrollBehavior='auto';
     setTimeout(function(){
-document.querySelector(".notify").style.display='none';
-    },1500);
+    document.querySelector(".notify").style.display='none';
+    },3000);
+
+    document.getElementById('Contact').reset();
 }
 
 function getInput(id){
@@ -43,7 +46,7 @@ messageref_2.set({
 
   
 
-exports.SendEmail2 = functions.database.ref("/message/{sessionid}").onCreate(snapshot)
+/*exports.SendEmail2 = functions.database.ref("/message/{sessionid}").onCreate(snapshot)
     {
     var value = snapshot.val();
     var name =value['name'];
@@ -94,5 +97,5 @@ function SendEmail(email , message){
         }
         console.log('Email sent');
     })
-}
+}*/
 
